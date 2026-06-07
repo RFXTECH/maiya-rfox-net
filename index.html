@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maiya's Sprigatito Page 🌿🐱</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d3b0d 0%, #1a5c2a 50%, #2d8a4e 100%);
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%);
+    }
+    h1 {
+      font-size: 3rem;
+      color: #7ddf64;
+      text-shadow: 0 0 20px #7ddf64, 0 0 40px #7ddf6455;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      color: #b8f0a8;
+      margin-bottom: 10px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .pokemon-card {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid #7ddf6444;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .pokemon-card img {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(125, 223, 100, 0.5));
+      transition: transform 0.3s;
+    }
+    .pokemon-card img:hover {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    .pokemon-name {
+      font-size: 2.5rem;
+      color: #7ddf64;
+      margin-top: 15px;
+      text-shadow: 0 0 10px #7ddf6455;
+    }
+    .pokemon-type {
+      display: inline-block;
+      background: linear-gradient(135deg, #5fbd3e, #3d9b26);
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 10px;
+      box-shadow: 0 3px 10px rgba(95, 189, 62, 0.4);
+    }
+    .stats {
+      background: rgba(125, 223, 100, 0.05);
+      border: 2px solid #7ddf6444;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    .stats h2 {
+      color: #7ddf64;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .stat-bar-container {
+      margin: 12px 0;
+    }
+    .stat-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+    .stat-name { color: #b8f0a8; font-weight: bold; }
+    .stat-value { color: #7ddf64; }
+    .stat-bar {
+      height: 12px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .stat-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #3d9b26, #7ddf64);
+      transition: width 1s ease;
+    }
+    .facts {
+      background: rgba(125, 223, 100, 0.05);
+      border: 2px solid #7ddf6444;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    .facts h2 {
+      color: #7ddf64;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .facts ul {
+      list-style: none;
+      padding: 0;
+    }
+    .facts li {
+      padding: 12px 15px;
+      margin: 8px 0;
+      background: rgba(255,255,255,0.03);
+      border-left: 4px solid #7ddf64;
+      border-radius: 0 8px 8px 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .facts li::before {
+      content: "🌿 ";
+    }
+    .evolutions {
+      text-align: center;
+      margin: 30px 0;
+      padding: 30px;
+      background: rgba(125, 223, 100, 0.05);
+      border: 2px solid #7ddf6444;
+      border-radius: 16px;
+    }
+    .evolutions h2 {
+      color: #7ddf64;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .evo-chain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .evo-item {
+      text-align: center;
+    }
+    .evo-item img {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(125, 223, 100, 0.3));
+      transition: transform 0.3s;
+    }
+    .evo-item img:hover {
+      transform: scale(1.15);
+    }
+    .evo-item p {
+      margin-top: 8px;
+      color: #b8f0a8;
+      font-weight: bold;
+    }
+    .evo-arrow {
+      font-size: 2rem;
+      color: #7ddf64;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #5a8a5a;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🌿🐱 SPRIGATITO 🐱🌿</h1>
+    <p class="subtitle">Maiya's Favorite Pokémon!</p>
+  </div>
+
+  <div class="container">
+    <div class="pokemon-card">
+      <img src="images/sprigatito-official.png" alt="Sprigatito Official Artwork">
+      <div class="pokemon-name">Sprigatito</div>
+      <div class="pokemon-type">🌿 Grass Type</div>
+      <p style="margin-top: 15px; color: #b8f0a8; font-size: 1.1rem;">
+        #906 — The Grass Cat Pokémon
+      </p>
+    </div>
+
+    <div class="stats">
+      <h2>📊 Sprigatito's Stats</h2>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">HP</span><span class="stat-value">40</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 26%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Attack</span><span class="stat-value">61</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 40%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Defense</span><span class="stat-value">54</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 35%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Sp. Attack</span><span class="stat-value">45</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 29%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Sp. Defense</span><span class="stat-value">45</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 29%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Speed</span><span class="stat-value">65</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 42%"></div></div>
+      </div>
+      <div class="stat-bar-container">
+        <div class="stat-label"><span class="stat-name">Total</span><span class="stat-value">310</span></div>
+        <div class="stat-bar"><div class="stat-fill" style="width: 34%"></div></div>
+      </div>
+    </div>
+
+    <div class="facts">
+      <h2>✨ Fun Facts About Sprigatito</h2>
+      <ul>
+        <li>Sprigatito is one of the three starter Pokémon in Pokémon Scarlet & Violet!</li>
+        <li>Its fur is similar to plants, and it can photosynthesize by soaking up sunlight</li>
+        <li>When Sprigatito kneads with its front paws, it releases a sweet aroma that mesmerizes everyone around it</li>
+        <li>It's known as the "Grass Cat Pokémon" — it's basically a magical plant kitty!</li>
+        <li>Sprigatito is 1'4" (0.4m) tall and weighs 9.0 lbs (4.1 kg) — super tiny and cute!</li>
+        <li>Its ability is Overgrow, which powers up Grass-type moves when it's in a tough spot</li>
+        <li>Sprigatito's attention-seeking personality means it gets sulky if its Trainer gives attention to other Pokémon</li>
+        <li>It was introduced in Generation IX and is the Paldea region's Grass-type starter</li>
+        <li>The sweet scent from its fur has therapeutic qualities and can make opponents lose their will to battle</li>
+        <li>Its design is inspired by an Iberian Lynx kitten mixed with a marijuana/catnip plant 🌱</li>
+      </ul>
+    </div>
+
+    <div class="evolutions">
+      <h2>🔄 Evolution Chain</h2>
+      <div class="evo-chain">
+        <div class="evo-item">
+          <img src="images/sprigatito-official.png" alt="Sprigatito">
+          <p>Sprigatito</p>
+          <p style="color: #666; font-size: 0.85rem;">Lv. 1</p>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-item">
+          <img src="images/floragato.png" alt="Floragato">
+          <p>Floragato</p>
+          <p style="color: #666; font-size: 0.85rem;">Lv. 16</p>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-item">
+          <img src="images/meowscarada.png" alt="Meowscarada">
+          <p>Meowscarada</p>
+          <p style="color: #666; font-size: 0.85rem;">Lv. 36</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Maiya's Sprigatito Page 🌿 | Gotta Catch 'Em All!</p>
+    </div>
+  </div>
+</body>
+</html>
